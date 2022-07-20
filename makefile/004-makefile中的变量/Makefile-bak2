@@ -1,0 +1,28 @@
+
+
+OBJ=add.o sub.o multi.o calc.o
+TARGET=calc
+
+
+
+$(TARGET):$(OBJ)
+	gcc $(OBJ) -o $(TARGET)
+
+add.o:add.cpp
+	gcc -c add.cpp -o add.o
+
+sub.o:sub.cpp
+	gcc -c sub.cpp -o sub.o
+
+multi.o:multi.cpp
+	gcc -c multi.cpp -o multi.o
+
+calc.o:calc.cpp
+	gcc -c calc.cpp -o calc.o
+
+clean:
+	rm -rf *.o calc
+
+
+
+

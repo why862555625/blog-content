@@ -1,0 +1,34 @@
+
+
+#公共
+
+SOURCE=$(wildcard  ./*.cpp ./*.c)
+OBJ=$(patsubst  %.cpp,%.o,$(SOURCE))
+OBJ:=$(patsubst  %.c,%.o,$(OBJ))
+
+
+.PHONY:clean
+
+
+ifndef TARGET
+TARGET:=test
+endif
+
+ifndef LDLIBS
+LDLIBS:=
+endif
+
+
+
+$(TARGET):$(OBJ)
+	$(CXX) $(LDLIBS) $^ -o $@
+	#gcc $(LDLIBS) $^ -o $@
+
+
+clean:
+	$(RM) $(TARGET) $(OBJ)
+
+
+show:
+	echo $(SOURCE)
+	echo $(OBJ)

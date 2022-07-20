@@ -1,0 +1,5 @@
+
+
+TARGET=z
+
+include ../makefile

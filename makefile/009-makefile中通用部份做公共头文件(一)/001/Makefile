@@ -1,0 +1,5 @@
+
+
+TARGET=c
+
+include ../makefile

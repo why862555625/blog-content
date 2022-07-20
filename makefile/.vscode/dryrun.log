@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory '/home/why/myslef/blog/makefile'
+make: Leaving directory '/home/why/myslef/blog/makefile'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

@@ -1,0 +1,23 @@
+ifeq 	判断是否相等，相等返回true，不相等返回false
+ifneq 	判断是否不相等，相等返回true，不相等返回false
+ifdef	判断变量是否存在，存在返回true，不存在返回false
+Ifndef 判断变量是否不存在，不存在返回true，存在返回false
+
+Ifeq ($(A),123)
+
+else
+
+endif
+
+
+Ifdef A
+
+else
+
+endif
+
+ifeq，ifneq 与条件之间要有空格，不然会报错
+可以只有if，没有else，
+但是没有 elseif的用法，如果要实现 elseif，就要写嵌套
+
+命令行传参  make -f Makefile FLAG=456  如果有Makefile ，则可写成 make FLAG=456
